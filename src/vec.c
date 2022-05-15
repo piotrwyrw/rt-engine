@@ -18,7 +18,7 @@ RT_Vec RT_CreateVecFromIndividualComponents(double x, double y, double z) {
 }
 
 double RT_SqMagVec(RT_Vec *v) {
-    return (v->d[0]*v->d[0]) + (v->d[1]*v->d[1]) + (v->d[2]*v->d[2]);
+    return (v->d[VEC_X_CMP]*v->d[VEC_X_CMP]) + (v->d[VEC_Y_CMP]*v->d[VEC_Y_CMP]) + (v->d[VEC_Z_CMP]*v->d[VEC_Z_CMP]);
 }
 
 double RT_MagVec(RT_Vec *v) {
