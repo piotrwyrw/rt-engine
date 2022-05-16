@@ -22,6 +22,10 @@ void RT_MulVec(RT_Vec *, double);
 void RT_NormVec(RT_Vec *);
 int RT_IsNorm(RT_Vec *);
 
-RT_Vec RT_DiffVec(RT_Vec *, RT_Vec *);
+RT_Vec RT_NewDiffVec(RT_Vec *, RT_Vec *);
+RT_Vec RT_AddVec(RT_Vec *, RT_Vec *);
+
+double RT_SqDstVec(RT_Vec *, RT_Vec *);
+double RT_DstVec(RT_Vec *, RT_Vec *);
 
 #endif

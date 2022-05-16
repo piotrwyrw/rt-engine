@@ -3,11 +3,11 @@
 #endif
 
 #ifndef WIDTH
-#   define WIDTH 1000
+#   define WIDTH 100
 #endif
 
 #ifndef HEIGHT
-#   define HEIGHT 700
+#   define HEIGHT 100
 #endif
 
 #ifndef TRUE
@@ -28,4 +28,14 @@
 
 #ifndef rgb
 #   define rgb RGB
+#endif
+
+typedef int RT_State;
+
+#ifndef ERROR_STATE
+#   define ERROR_STATE 0
+#endif
+
+#ifndef SUCCESS_STATE
+#   define SUCCESS_STATE 1
 #endif
