@@ -19,6 +19,8 @@ double RT_MagVec(RT_Vec *);
 
 void RT_DivVec(RT_Vec *, double);
 void RT_MulVec(RT_Vec *, double);
+void RT_NormVec(RT_Vec *);
+int RT_IsNorm(RT_Vec *);
 
 RT_Vec RT_DiffVec(RT_Vec *, RT_Vec *);
 

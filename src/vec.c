@@ -37,6 +37,16 @@ void RT_MulVec(RT_Vec *v, double d) {
     v->d[VEC_Z_CMP] *= d;
 }
 
+void RT_NormVec(RT_Vec *v) {
+    double m = RT_MagVec(v);
+    if (m == 0.0) return;
+    RT_DivVec(v, m);
+}
+
+int RT_IsNorm(RT_Vec *v) {
+    return RT_MagVec(v) == 1.0;
+}
+
 RT_Vec RT_DiffVec(RT_Vec *v1, RT_Vec *v2) {
     return RT_CreateVecFromIndividualComponents(
         v1->d[VEC_X_CMP] - v2->d[VEC_X_CMP],
