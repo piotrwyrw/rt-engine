@@ -2,7 +2,7 @@
 #include "def.h"
 
 #define RAY_HIT_THRESHOLD 0.001
-#define MAX_RENDER_DEPTH 100
+#define MAX_RENDER_DEPTH 200
 
 void RT_StartEngine(RT_SDLParams *p, RT_World *w) {
     INFINITE {
@@ -22,7 +22,7 @@ void RT_Render(RT_SDLParams *p, RT_World *w) {
     if (frame > 0) return;
     frame ++;
     RT_Color c;
-    printf("Rendering frame 0 ...\n");
+    printf("Rendering  ...\n");
     for (unsigned x = 0; x < WIDTH; x ++)
         for (unsigned y = 0; y < HEIGHT; y ++) {
             RT_Vec v = RT_CreateVecFromIndividualComponents((double) x, (double) y, 0.0);
@@ -46,14 +46,10 @@ RT_State RT_TraceRay(RT_Color *target, RT_World *wd, RT_Vec *start, RT_Vec *dir)
 
     INFINITE {
         RT_Sph s = wd->ss[RT_ClosestObstacle(wd, &_s)];
-        // printf("%f\n", d);
-        // return ERROR_STATE;
         double _d = RT_DstSph(&_s, &s);
         d += _d;
-        printf("Closest obstacle: %f.\n", _d);
 
         if (d > MAX_RENDER_DEPTH) {
-            // printf("Exceeded max. depth of %d: %d;\n", MAX_RENDER_DEPTH, (int) d);
             return ERROR_STATE;
         }
 

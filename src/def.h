@@ -3,11 +3,11 @@
 #endif
 
 #ifndef WIDTH
-#   define WIDTH 100
+#   define WIDTH 1000
 #endif
 
 #ifndef HEIGHT
-#   define HEIGHT 100
+#   define HEIGHT 700
 #endif
 
 #ifndef TRUE
