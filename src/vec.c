@@ -57,9 +57,9 @@ RT_Vec RT_NewDiffVec(RT_Vec *v1, RT_Vec *v2) {
 }
 
 RT_Vec RT_AddVec(RT_Vec *target, RT_Vec *v) {
-    target->d[VEC_X_CMP] = v->d[VEC_X_CMP];
-    target->d[VEC_Y_CMP] = v->d[VEC_Y_CMP];
-    target->d[VEC_Z_CMP] = v->d[VEC_Z_CMP];
+    target->d[VEC_X_CMP] += v->d[VEC_X_CMP];
+    target->d[VEC_Y_CMP] += v->d[VEC_Y_CMP];
+    target->d[VEC_Z_CMP] += v->d[VEC_Z_CMP];
 }
 
 double RT_SqDstVec(RT_Vec *v1, RT_Vec *v2) {
